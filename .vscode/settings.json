@@ -1,0 +1,8 @@
+{
+  // Automatically restart all the other extensions after loading the direnv
+  // environment. This way the other extensions will have the environment as well.
+  "direnv.restart.automatic": true,
+  "files.associations": {
+    ".envrc": "shellscript",
+  },
+}
