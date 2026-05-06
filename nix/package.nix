@@ -3,13 +3,13 @@ let
   inherit (pkgs) bash resholve;
   inherit (pkgs.lib) getExe;
 
-  pname = "pre-save-cache";
+  pname = "pre-save";
   dependencies = with pkgs; [ coreutils ];
 in
 resholve.mkDerivation {
   inherit pname;
   version = "0.0.1";
-  src = ../pre-save-cache.bash;
+  src = ../pre-save.bash;
   meta.mainProgram = pname;
   dontUnpack = true;
 

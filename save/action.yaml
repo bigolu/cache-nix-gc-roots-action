@@ -3,11 +3,11 @@ description: Save cache
 runs:
   using: "composite"
   steps:
-    - id: pre-save-cache
+    - id: pre-save
       working-directory: ${{ github.action_path }}/..
       shell: nix run --file flake-compat.nix outputsForCurrentSystem.devShells.ci -- bash {0}
-      run: pre-save-cache
-    - if: steps.pre-save-cache.outputs.should-save == 'true'
+      run: pre-save
+    - if: steps.pre-save.outputs.should-save == 'true'
       uses: nix-community/cache-nix-action/save@7df957e333c1e5da7721f60227dbba6d06080569 # v7
       with:
         # SYNC: cache-settings-nix
