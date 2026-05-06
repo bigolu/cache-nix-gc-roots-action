@@ -18,7 +18,7 @@ new="$(mktemp)"
 	# Why we sort:
 	#   - `comm`, used below, requires input files to be sorted
 	#   - So we can compare `$old` to `$new` below
-	#   - To deduplicate, which we do by using the `--unique` flag to `sort`
+	#   - To deduplicate, which we do by passing the `--unique` flag to `sort`
 	sort --unique >"$new"
 
 if [[ -e $old && $(<"$old") == $(<"$new") ]]; then
