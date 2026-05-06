@@ -1,5 +1,5 @@
-name: Save Cache
-description: Save cache
+name: Restore Cache
+description: Restore cache
 runs:
   using: "composite"
   steps:
